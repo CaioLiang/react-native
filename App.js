@@ -5,11 +5,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text 
-      
-        // numero de linhas que aparecem
         ellipsizeMode='middle' // coloca reticencias em um Text
         selectable   // torna selecionavel o texto     
-
       >quele que habita no esconderijo do Altíssimo, à sombra do Onipotente descansará.
       2 Direi do Senhor: Ele é o meu Deus, o meu refúgio, a minha fortaleza, e nele confiarei.
       3 Porque ele te livrará do laço do passarinheiro, e da peste perniciosa.
@@ -23,7 +20,13 @@ export default function App() {
       11 Porque aos seus anjos dará ordem a teu respeito, para te guardarem em to</Text>
 
       {/* Limita a quantidade de linhas */}
-      {/* <TextInput placeholder="Text" style={{borderWidth: 1, width: "80%"}}/>  */}
+      <TextInput 
+      placeholder="Text" 
+      style={{borderWidth: 1, width: "80%"}}   
+      autoFocus //O cursor ficará piscando ao clicar/
+      editable = {false}
+      // numero de linhas que aparecem
+      > 
       <StatusBar style="auto" />
     </View>
   );
